@@ -1,0 +1,74 @@
+name: test-network-org1
+version: 1.0.0
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+      - peer0.org1.example.com
+    certificateAuthorities:
+      - ca.org1.example.com
+peers:
+  peer0.org1.example.com:
+    url: grpcs://peer0.org1.example.com:7051
+    tlsCACerts:
+      path: /certs/tlsca.org1.example.com-cert.pem
+    grpcOptions:
+      ssl-target-name-override: peer0.org1.example.com
+      hostnameOverride: peer0.org1.example.com
+certificateAuthorities:
+  ca.org1.example.com:
+    url: https://localhost:7054
+    caName: ca-org1
+    tlsCACerts:
+      pem:
+        - |
+          -----BEGIN CERTIFICATE-----
+          MIICJjCCAc2gAwIBAgIUA7zTG9ILXEvbFDlNjHsYRQCicl8wCgYIKoZIzj0EAwIw
+          cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+          EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+          Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjUwNDI0MTY1OTAwWhcNNDAwNDIwMTY1OTAw
+          WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+          BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+          Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABOLc
+          6bKeZYltgvQcMETEH70nOlNSY07rWX+3oSZrCu/Sz0MX7rSc2ifYhOCZ7xftjUCN
+          vbzkSH7vhFzcIDEr+QijRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+          AQH/AgEBMB0GA1UdDgQWBBSvAS+0dzSJqDHNJDXNw31VXdPMCzAKBggqhkjOPQQD
+          AgNHADBEAiBj+N+gOnZKvTNE1sK6e3RJ9/0BFlRV8tWY3FdWDfHQSwIgCBoXZSr3
+          A14CvqT+j3p7bqypsJy8ZdDnQfDotZYhhr8=
+          -----END CERTIFICATE-----
+    httpOptions:
+      verify: false
+channels:
+  mychannel:
+    orderers:
+      orderer.example.com:
+        url: grpcs://orderer.example.com:7050
+        grpcOptions:
+          ssl-target-name-override: orderer.example.com
+        tlsCACerts:
+          pem: |
+            -----BEGIN CERTIFICATE-----
+            MIICJjCCAc2gAwIBAgIUSP01DReuqshLbo6/nBkzdV8MniMwCgYIKoZIzj0EAwIw
+            cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+            EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+            Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjUwNDI1MTYwNjAwWhcNNDAwNDIxMTYwNjAw
+            WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+            BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+            Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABDCU
+            EATzAEFhmMq7E4rTBu3jF/HJ7/KLNnxECz05c1oWZ9ygVM7V7sYLwVQ9hZ14+THd
+            kCSA33fPqHSrLuDpHOijRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+            AQH/AgEBMB0GA1UdDgQWBBRGn08gW8UvNcLr0gYYL9fR8lxzvzAKBggqhkjOPQQD
+            AgNHADBEAiAYiJgO9dtgi3/9cF2Et7OLDLEiBMOlITHycpfLr8zd0wIgaYCtfCfz
+            9CZdSB+buPpwesADB0GoSfDjfCyxUisbqRc=
+            -----END CERTIFICATE-----
+    peers:
+      peer0.org1.example.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true

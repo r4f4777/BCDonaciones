@@ -1,0 +1,83 @@
+name: test-network-org1
+version: 1.0.0
+
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+      - peer0.org1.example.com
+    certificateAuthorities:
+      - ca.org1.example.com
+
+peers:
+  peer0.org1.example.com:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      pem: |-
+        -----BEGIN CERTIFICATE-----
+        MIICVzCCAf6gAwIBAgIRAL7vDfxRIpetmrKuAwL6wEgwCgYIKoZIzj0EAwIwdjEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHzAdBgNVBAMTFnRs
+        c2NhLm9yZzEuZXhhbXBsZS5jb20wHhcNMjUwNTA0MTE0OTAwWhcNMzUwNTAyMTE0
+        OTAwWjB2MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UE
+        BxMNU2FuIEZyYW5jaXNjbzEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEfMB0G
+        A1UEAxMWdGxzY2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49
+        AwEHA0IABAAoEQ3EWxt82Lnk5D24sUzEDTO1xzWDtqvrvZ159rXumFRka36BDoVE
+        YUs4TkF2LWMw8N0OyfgqR1k+zhQL35KjbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNV
+        HSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNV
+        HQ4EIgQgr5HIM8V4gngwqsAkGbzQTxljUATV6pVY98eZs7u1yQswCgYIKoZIzj0E
+        AwIDRwAwRAIgOA2XSeE9efqsmeGqh5+xAYbQwrwotjgc2PDvBALX3KQCID0YauG6
+        vkzFwgWBcWiP52Epb5LypSQia6dzDrRHJgw8
+        -----END CERTIFICATE-----
+    grpcOptions:
+      ssl-target-name-override: peer0.org1.example.com
+      hostnameOverride: peer0.org1.example.com
+
+certificateAuthorities:
+  ca.org1.example.com:
+    url: https://localhost:7054
+    caName: ca-org1
+    tlsCACerts:
+      pem: |-
+        -----BEGIN CERTIFICATE-----
+        MIICUjCCAfigAwIBAgIRAN+GqcsPkh8h9XYVStLkjPQwCgYIKoZIzj0EAwIwczEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjUwNTA0MTE0OTAwWhcNMzUwNTAyMTE0OTAw
+        WjBzMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+        U2FuIEZyYW5jaXNjbzEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UE
+        AxMTY2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA
+        BE726QV/O1IdOh8PuWk7PYceopToPHMFWKoOZL2gzjGHjndh3q+al/Fnzzv7ntJQ
+        hwnBtSyJ8Zh5cpH8GT0ooqajbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU
+        BggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQg
+        HsZWMURJQEvC980xk+oifzlP80GOf7zVHPzz1l/DdJkwCgYIKoZIzj0EAwIDSAAw
+        RQIgFF2OtdpEErsOwidky5LlZMhV8ctOYGc75weyzFo0Eg0CIQDMxt/b79KhF4Zg
+        D282osQYHYQY5X7gpp04bzL30Sk3Eg==
+        -----END CERTIFICATE-----
+    httpOptions:
+      verify: false
+
+channels:
+  mychannel:
+    orderers:
+      orderer.example.com:
+        url: grpcs://localhost:7050
+        grpcOptions:
+          ssl-target-name-override: orderer.example.com
+        tlsCACerts:
+          pem: |-
+            -----BEGIN CERTIFICATE-----
+            (aquí el contenido de ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt)
+            -----END CERTIFICATE-----
+    peers:
+      peer0.org1.example.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true

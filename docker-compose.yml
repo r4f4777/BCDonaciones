@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  mariadb:
+    image: mariadb:10.5
+    container_name: tfg-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tfg_db
+      MYSQL_USER: tfg_user
+      MYSQL_PASSWORD: tfg_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - fabric_test
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  tfg-backend:
+    build:
+      context: .
+    container_name: tfg-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://tfg-mariadb:3306/tfg_db"
+      SPRING_DATASOURCE_USERNAME: "tfg_user"
+      SPRING_DATASOURCE_PASSWORD: "tfg_password"
+      FABRIC_CA_CLIENT_TLS_CERTFILES: "/app/fabric/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
+      FABRIC_NETWORK_PEER: "grpcs://peer0.org1.example.com:7051"
+    volumes:
+      - ./src/main/resources/fabric:/app/fabric
+      - ./fabric/crypto-config/peerOrganizations/org1.example.com/tlsca:/app/crypto/tlsca:ro
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    networks:
+      - fabric_test
+
+networks:
+  fabric_test:
+    external: true
