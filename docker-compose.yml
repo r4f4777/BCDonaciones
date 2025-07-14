@@ -10,16 +10,18 @@ services:
       MYSQL_USER: tfg_user
       MYSQL_PASSWORD: tfg_password
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
-      - ./docker/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mariadb_data:/var/lib/mysql
+      - ./docker/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD","mysqladmin","ping","-h","localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
     networks:
       - fabric_test
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   tfg-backend:
     build:
@@ -28,20 +30,32 @@ services:
     ports:
       - "8080:8080"
     environment:
+      # ---- MySQL ----
       SPRING_DATASOURCE_URL: "jdbc:mysql://tfg-mariadb:3306/tfg_db"
       SPRING_DATASOURCE_USERNAME: "tfg_user"
       SPRING_DATASOURCE_PASSWORD: "tfg_password"
-      FABRIC_CA_CLIENT_TLS_CERTFILES: "/app/fabric/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
-      FABRIC_NETWORK_PEER: "grpcs://peer0.org1.example.com:7051"
-    volumes:
-      - ./src/main/resources/fabric:/app/fabric
-      - ./fabric/crypto-config/peerOrganizations/org1.example.com/tlsca:/app/crypto/tlsca:ro
+
+      # ---- Fabric ----
+      FABRIC_PEER_ENDPOINT: "peer0.org1.example.com:7051"
+      FABRIC_PEER_AUTH: "peer0.org1.example.com"
+      FABRIC_USER: "User1"
+      FABRIC_MSP_ID: "Org1MSP"
+      FABRIC_CHANNEL: "mychannel"
+      FABRIC_CHAINCODE: "donation"
+      # JAVA_TOOL_OPTIONS: '-Dio.grpc.Context.defaultStorage=io.grpc.Context$ThreadLocalContextStorage'
+
     depends_on:
       mariadb:
         condition: service_healthy
     networks:
       - fabric_test
+    extra_hosts:
+      - "peer0.org1.example.com:172.18.0.6"
+    command: java -Dio.grpc.Context.defaultStorage=io.grpc.Context$ThreadLocalContextStorage -jar app.jar
 
 networks:
   fabric_test:
     external: true
+
+volumes:
+  mariadb_data:

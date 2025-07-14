@@ -10,7 +10,6 @@ public class RegisterRequest {
     private String nombre;
     private String password;
     private String email;
-    //private Rol rol;
     private Set<Rol> roles;
 
     public String getNombre() {
@@ -44,13 +43,5 @@ public class RegisterRequest {
     public void setRoles(Set<Rol> roles) {
         this.roles = roles;
     }
-
-    /*public Rol getRol() {
-        return rol;
-    }
-
-    public void setRol(Rol rol) {
-        this.rol = rol;
-    }*/
 
 }

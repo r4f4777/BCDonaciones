@@ -1,0 +1,8 @@
+# Ignora TODO por defecto
+*
+
+# Excepto:
+!Dockerfile
+!target/
+!target/tfg-backend-0.0.1-SNAPSHOT.jar
+!fabric/

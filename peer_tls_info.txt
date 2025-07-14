@@ -1,0 +1,209 @@
+Can't use SSL_get_servername
+CONNECTED(00000003)
+write to 0x58dc61101cc0 [0x58dc61112b60] (293 bytes => 293 (0x125))
+0000 - 16 03 01 01 20 01 00 01-1c 03 03 9a af 68 d6 c2   .... ........h..
+0010 - 26 64 cb 5c c0 39 40 b9-22 51 28 e5 57 b1 93 fe   &d.\.9@."Q(.W...
+0020 - d6 8c 07 9a fd 4d 9c 8d-77 0b 5a 20 7c 9f a1 41   .....M..w.Z |..A
+0030 - 45 f4 63 c9 34 f8 25 46-85 de 84 e7 51 02 4d 06   E.c.4.%F....Q.M.
+0040 - 9b cd 31 0e 44 03 66 6c-97 b7 97 03 00 3e 13 02   ..1.D.fl.....>..
+0050 - 13 03 13 01 c0 2c c0 30-00 9f cc a9 cc a8 cc aa   .....,.0........
+0060 - c0 2b c0 2f 00 9e c0 24-c0 28 00 6b c0 23 c0 27   .+./...$.(.k.#.'
+0070 - 00 67 c0 0a c0 14 00 39-c0 09 c0 13 00 33 00 9d   .g.....9.....3..
+0080 - 00 9c 00 3d 00 3c 00 35-00 2f 00 ff 01 00 00 95   ...=.<.5./......
+0090 - 00 0b 00 04 03 00 01 02-00 0a 00 16 00 14 00 1d   ................
+00a0 - 00 17 00 1e 00 19 00 18-01 00 01 01 01 02 01 03   ................
+00b0 - 01 04 00 23 00 00 00 16-00 00 00 17 00 00 00 0d   ...#............
+00c0 - 00 2a 00 28 04 03 05 03-06 03 08 07 08 08 08 09   .*.(............
+00d0 - 08 0a 08 0b 08 04 08 05-08 06 04 01 05 01 06 01   ................
+00e0 - 03 03 03 01 03 02 04 02-05 02 06 02 00 2b 00 05   .............+..
+00f0 - 04 03 04 03 03 00 2d 00-02 01 01 00 33 00 26 00   ......-.....3.&.
+0100 - 24 00 1d 00 20 fd ed 9f-c9 57 e3 5a c5 f9 a0 7c   $... ....W.Z...|
+0110 - c8 57 96 81 8b ca f8 f4-e5 2a 60 30 d4 dc dc 8a   .W.......*`0....
+0120 - fc eb 78 5c 04                                    ..x\.
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 16 03 03 00 7a                                    ....z
+read from 0x58dc61101cc0 [0x58dc61109948] (122 bytes => 122 (0x7A))
+0000 - 02 00 00 76 03 03 99 f1-c3 0c d7 c8 53 9a fe 56   ...v........S..V
+0010 - 99 b1 ab 50 21 60 7e 7f-06 2c d2 f1 e5 43 1f 1b   ...P!`~..,...C..
+0020 - 1c a0 4c cb 7b 1e 20 7c-9f a1 41 45 f4 63 c9 34   ..L.{. |..AE.c.4
+0030 - f8 25 46 85 de 84 e7 51-02 4d 06 9b cd 31 0e 44   .%F....Q.M...1.D
+0040 - 03 66 6c 97 b7 97 03 13-01 00 00 2e 00 2b 00 02   .fl..........+..
+0050 - 03 04 00 33 00 24 00 1d-00 20 c1 fc fb 08 78 02   ...3.$... ....x.
+0060 - b1 c4 8c f7 77 5c e9 cb-57 f8 37 f2 e1 7a b9 b1   ....w\..W.7..z..
+0070 - 85 a0 d5 4b 2c ec bd 46-cf 0f                     ...K,..F..
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 14 03 03 00 01                                    .....
+read from 0x58dc61101cc0 [0x58dc61109948] (1 bytes => 1 (0x1))
+0000 - 01                                                .
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 00 17                                    .....
+read from 0x58dc61101cc0 [0x58dc61109948] (23 bytes => 23 (0x17))
+0000 - cc 58 1d 73 22 19 f9 ac-5e 8a d2 14 ee 8c 51 41   .X.s"...^.....QA
+0010 - 31 1e 13 f0 88 8b d2                              1......
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 01 28                                    ....(
+read from 0x58dc61101cc0 [0x58dc61109948] (296 bytes => 296 (0x128))
+0000 - 7b 9f 07 0c d6 85 2a 52-20 b5 f9 90 4a be 4f 7e   {.....*R ...J.O~
+0010 - 64 16 a8 3d ba 18 19 46-03 65 b3 1a 5d 8e 12 7f   d..=...F.e..]...
+0020 - 04 4c 89 b2 8f 97 c1 d1-04 00 10 1d f6 f3 ad 14   .L..............
+0030 - ea d5 0e 6f 83 05 de db-11 6e ab 3a 6c 3c 48 52   ...o.....n.:l<HR
+0040 - b3 32 ba 03 dc 28 28 b3-32 66 bd 18 fb ed 75 cd   .2...((.2f....u.
+0050 - 20 14 62 8e 41 a8 1a 77-b6 fa 22 7b 12 bf 9e ef    .b.A..w.."{....
+0060 - 65 ff c0 6a 86 df 20 48-b9 26 ce 47 c4 7f 8e 1a   e..j.. H.&.G....
+0070 - c9 3c f2 56 3d 37 60 af-81 b6 08 78 80 9d e4 02   .<.V=7`....x....
+0080 - 0c ff 3d f1 61 43 5d 71-01 52 5c b2 6b ba 25 80   ..=.aC]q.R\.k.%.
+0090 - 17 9d 63 f5 c3 ee 02 30-8e b1 f3 c6 1e ce db cd   ..c....0........
+00a0 - 2c 3a 07 27 d4 3e 67 3c-77 b5 96 b2 8e 5c 42 e4   ,:.'.>g<w....\B.
+00b0 - 8d 63 62 f5 52 bf 88 5f-c6 b9 e0 8b 0e 78 6e bc   .cb.R.._.....xn.
+00c0 - 9d c3 e9 f7 3e d6 56 98-b8 5f 7a 77 c2 52 b6 f5   ....>.V.._zw.R..
+00d0 - 6f 7a c8 0f 04 21 57 02-db 03 7c 98 cd af af ee   oz...!W...|.....
+00e0 - da 13 a7 e8 f1 4depth=0 C = US, ST = North Carolina, O = Hyperledger, OU = peer, CN = peer0
+verify error:num=20:unable to get local issuer certificate
+verify return:1
+depth=0 C = US, ST = North Carolina, O = Hyperledger, OU = peer, CN = peer0
+verify error:num=21:unable to verify the first certificate
+verify return:1
+depth=0 C = US, ST = North Carolina, O = Hyperledger, OU = peer, CN = peer0
+verify return:1
+8 a0 b3-df 5c 38 8c bd 62 a9 cc   .....H...\8..b..
+00f0 - 50 b3 31 d0 9f 05 09 ff-23 02 34 2f 30 13 28 d2   P.1.....#.4/0.(.
+0100 - ee 0d 84 48 0d bd 85 9e-e0 3b a9 e6 43 47 e7 be   ...H.....;..CG..
+0110 - d2 b5 53 59 64 2c ba f9-f3 50 25 36 86 c5 1c 6c   ..SYd,...P%6...l
+0120 - 01 a0 89 7e cc 14 e2 e7-                          ...~....
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 02 f7                                    .....
+read from 0x58dc61101cc0 [0x58dc61109948] (759 bytes => 759 (0x2F7))
+0000 - 8d b8 da f3 c9 07 bc 95-49 69 15 d9 96 38 f1 2d   ........Ii...8.-
+0010 - c9 59 78 38 e0 22 0f 93-4c a7 a7 4e 30 12 2f 06   .Yx8."..L..N0./.
+0020 - 24 6e e3 d8 9a 38 ae 04-b9 7d 74 57 68 12 2e bd   $n...8...}tWh...
+0030 - af 73 cd 1d 9f 9a da 51-66 d7 e8 ee 23 e4 52 23   .s.....Qf...#.R#
+0040 - 11 7c d1 5a e2 7d 5d 2a-c8 16 ea 00 58 ef 99 e0   .|.Z.}]*....X...
+0050 - 57 1d 26 94 71 6d 78 e9-63 ac 4d 1a 7f 07 a5 ff   W.&.qmx.c.M.....
+0060 - 59 00 83 9e e5 14 eb be-98 a9 e3 cc fc 04 a8 71   Y..............q
+0070 - 03 ad cf 0a 08 c7 18 27-44 68 13 01 0a 22 e9 d8   .......'Dh..."..
+0080 - e2 cb f2 21 6d 30 e0 49-48 2b 45 cd 8c e6 7b 04   ...!m0.IH+E...{.
+0090 - 06 bd 47 33 e3 b9 0c 67-c3 fa 6b 28 9e 6a be 82   ..G3...g..k(.j..
+00a0 - 98 d8 db bc 62 d5 98 e0-9a bf 1d 95 d8 1d dd 1a   ....b...........
+00b0 - 3f c4 cc f3 91 7e d8 78-92 a7 b8 88 3e 57 5d cb   ?....~.x....>W].
+00c0 - 9e f2 e3 b1 e0 42 e0 59-a7 a5 0b 78 31 3a ba fe   .....B.Y...x1:..
+00d0 - 9a f2 0e fa 2f 5d 82 1d-76 3a dc f3 9f 12 75 1a   ..../]..v:....u.
+00e0 - ab 24 1d db 54 78 e6 dc-ec 2c c0 b0 b9 f6 b4 76   .$..Tx...,.....v
+00f0 - 42 25 f6 90 69 0e a2 ba-36 f0 28 57 f4 36 c0 57   B%..i...6.(W.6.W
+0100 - d7 67 74 15 57 95 95 8f-0b c3 3a 3a 06 95 62 ce   .gt.W.....::..b.
+0110 - c6 12 15 58 87 44 e3 7b-a1 23 bc f9 0e 38 be 34   ...X.D.{.#...8.4
+0120 - 1f e4 27 b2 23 cb 51 cc-37 ff 47 76 ce 3c 27 c1   ..'.#.Q.7.Gv.<'.
+0130 - 52 69 73 d6 af a4 b2 a4-d7 0a 68 be 20 46 ca 7e   Ris.......h. F.~
+0140 - 67 d5 3e 43 4d 90 49 4a-59 21 be 0c 5d f9 d6 bd   g.>CM.IJY!..]...
+0150 - af 8c 55 47 1b db a0 c0-9c 7a 1f 69 68 b8 29 e6   ..UG.....z.ih.).
+0160 - 10 77 cd 71 d0 46 63 56-73 31 a1 b7 23 dc 74 94   .w.q.FcVs1..#.t.
+0170 - 0f 54 db 6a e1 28 03 1a-24 2d 06 50 3e 11 5d 47   .T.j.(..$-.P>.]G
+0180 - 6f ef 30 ff 28 40 bf 5a-63 43 4f 1d 1d 91 6f d1   o.0.(@.ZcCO...o.
+0190 - de 1c 68 e7 27 be 81 e6-fd 71 6c fd 68 49 11 0c   ..h.'....ql.hI..
+01a0 - 0b e7 e5 ba 4a df 6c 6b-ad 40 28 b1 6f 10 9d f1   ....J.lk.@(.o...
+01b0 - 8f 6d 24 fa 89 34 50 0e-6a ec 86 a2 ba 88 89 00   .m$..4P.j.......
+01c0 - 23 9b 1c dd e3 00 fe 83-28 64 f7 8b bd fc 2f 45   #.......(d..../E
+01d0 - 8b b9 55 47 6a 27 e7 aa-c2 5e 1d 0d 7d 75 c3 14   ..UGj'...^..}u..
+01e0 - 34 30 77 79 3c d5 07 32-04 97 68 a7 ba c4 a8 7f   40wy<..2..h.....
+01f0 - 5b 70 b8 2b f7 0c c3 bf-10 a6 6d 2b ba 36 ba 33   [p.+......m+.6.3
+0200 - 49 af 7d bc 5c 6f 5c 53-ba 2f 7b 48 58 a8 69 d9   I.}.\o\S./{HX.i.
+0210 - 3a b6 ec 02 9e ec e2 8b-24 26 7a aa 59 8a 04 c2   :.......$&z.Y...
+0220 - d8 de 12 55 31 da 8b 16-03 cf d0 a8 ac b3 e5 cb   ...U1...........
+0230 - 3d 98 76 cf ca fb 18 6b-d6 38 eb 0a ad 39 ad 75   =.v....k.8...9.u
+0240 - 0b 4b 31 87 b1 4c 1e 94-b8 25 d2 1a 12 cb ae 4d   .K1..L...%.....M
+0250 - a8 65 7b 7a 92 36 59 94-d6 a1 9f 4e a2 be 6b 34   .e{z.6Y....N..k4
+0260 - 39 3c 97 bb 79 c6 c6 35-7c 42 5e 09 ad 58 40 a0   9<..y..5|B^..X@.
+0270 - 50 40 5b c6 4f a7 1f 11-3c 30 72 1b 54 55 86 83   P@[.O...<0r.TU..
+0280 - b8 f8 fc 3d 85 d3 9e 25-1d 2d 2e 6c c8 29 08 1a   ...=...%.-.l.)..
+0290 - 2f 18 5b e8 95 88 5c be-8a 61 f7 16 4a e0 ce 1e   /.[...\..a..J...
+02a0 - f1 1d 0a 88 d7 b4 4d 60-09 93 9d e0 9a 1a f4 f0   ......M`........
+02b0 - 94 2a 38 9d b5 81 44 9b-61 07 b1 4f a2 2f ca 8e   .*8...D.a..O./..
+02c0 - 8e f7 2d 1e 0d c6 a0 53-a7 4d 64 78 b9 a6 91 1c   ..-....S.Mdx....
+02d0 - f8 14 70 e8 7b a1 1d b7-da 53 f5 0f 16 75 a1 1f   ..p.{....S...u..
+02e0 - 9c 7d 94 1a 5a 5c d3 95-48 8e 7c 66 d7 5e 79 8c   .}..Z\..H.|f.^y.
+02f0 - b6 b3 d1 c2 80 95 14                              .......
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 00 60                                    ....`
+read from 0x58dc61101cc0 [0x58dc61109948] (96 bytes => 96 (0x60))
+0000 - ec d3 a1 e9 47 7b 63 05-bf d7 e5 3b 10 43 3b f2   ....G{c....;.C;.
+0010 - 25 f3 8e 97 bd 3e 63 7d-5c 0d 63 a7 77 3c 7f 8a   %....>c}\.c.w<..
+0020 - f5 e1 c1 e6 f2 9c 18 4f-32 ac cc 95 81 72 d6 b5   .......O2....r..
+0030 - 83 a6 b0 ce 02 c8 04 d5-b7 2c 73 30 ae cb a0 b4   .........,s0....
+0040 - 30 61 c1 d2 6f 71 d0 12-cc 7f 3d 41 a6 0e f1 65   0a..oq....=A...e
+0050 - 82 12 2e c5 27 25 a9 6f-80 e2 05 a5 1c ad fa 0b   ....'%.o........
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 00 35                                    ....5
+read from 0x58dc61101cc0 [0x58dc61109948] (53 bytes => 53 (0x35))
+0000 - 18 0a 18 27 c9 90 73 60-b2 df 21 2b d3 f7 4a 97   ...'..s`..!+..J.
+0010 - 4e 0a 6a 8e 1d b6 c5 5f-70 fc a1 65 a3 62 87 cb   N.j...._p..e.b..
+0020 - e4 75 26 ba 44 b5 05 53-c2 22 4c 66 a8 99 5f 2b   .u&.D..S."Lf.._+
+0030 - d7 55 12 dd 55                                    .U..U
+write to 0x58dc61101cc0 [0x58dc61112b60] (94 bytes => 94 (0x5E))
+0000 - 14 03 03 00 01 01 17 03-03 00 19 9b e3 36 e3 52   .............6.R
+0010 - 8d 7f 97 56 89 37 b4 4c-d7 9b 33 12 3b ae f4 65   ...V.7.L..3.;..e
+0020 - 1b 07 32 06 17 03 03 00-35 4a c3 29 a9 86 49 25   ..2.....5J.)..I%
+0030 - c6 d8 15 df b9 61 ac 9d-b1 27 97 87 57 7d 1d bc   .....a...'..W}..
+0040 - 62 a9 b3 2d 5c 53 95 e1-c6 6e 5d 25 ab a1 02 28   b..-\S...n]%...(
+0050 - 38 94 be 89 ce 03 6f 99-0b 19 22 11 43 ad         8.....o...".C.
+---
+Certificate chain
+ 0 s:C = US, ST = North Carolina, O = Hyperledger, OU = peer, CN = peer0
+   i:C = US, ST = North Carolina, L = Durham, O = org1.example.com, CN = ca.org1.example.com
+   a:PKEY: id-ecPublicKey, 256 (bit); sigalg: ecdsa-with-SHA256
+   v:NotBefore: Jun 27 10:22:00 2025 GMT; NotAfter: Jun 27 10:27:00 2026 GMT
+-----BEGIN CERTIFICATE-----
+MIIC1TCCAnygAwIBAgIUdsFspVJBZAtE2JI8arwsFWPvkAcwCgYIKoZIzj0EAwIw
+cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjUwNjI3MTAyMjAwWhcNMjYwNjI3MTAyNzAw
+WjBbMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNV
+BAoTC0h5cGVybGVkZ2VyMQ0wCwYDVQQLEwRwZWVyMQ4wDAYDVQQDEwVwZWVyMDBZ
+MBMGByqGSM49AgEGCCqGSM49AwEHA0IABG/+hk1vu5pkIOYIjewwp4VfA3ehB4tN
+3oypm8D+/1GTVW1tx/pPo/Kk4ymzTdikDYrtyCgYEfxPvwWzkfXPtJ2jggEHMIIB
+AzAOBgNVHQ8BAf8EBAMCA6gwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMC
+MAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFKDdFU7AOXHFG2tSLIrWlCHT6kK0MB8G
+A1UdIwQYMBaAFCS2tZRuMiEkMWZObI6hTlJqkQpOMCwGA1UdEQQlMCOCFnBlZXIw
+Lm9yZzEuZXhhbXBsZS5jb22CCWxvY2FsaG9zdDBWBggqAwQFBgcIAQRKeyJhdHRy
+cyI6eyJoZi5BZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1lbnRJRCI6InBlZXIw
+IiwiaGYuVHlwZSI6InBlZXIifX0wCgYIKoZIzj0EAwIDRwAwRAIgLuy8RALrRmgi
+DMU6XGzoRaEUq3LSzcZgGxto/THHz0ICIHxJRy9sFYCy9TA5hZ3ArZmu35quqoti
+EYGsuHdunhGp
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=C = US, ST = North Carolina, O = Hyperledger, OU = peer, CN = peer0
+issuer=C = US, ST = North Carolina, L = Durham, O = org1.example.com, CN = ca.org1.example.com
+---
+Acceptable client certificate CA names
+C = US, ST = North Carolina, L = Durham, O = org1.example.com, CN = ca.org1.example.com
+C = UK, ST = Hampshire, L = Hursley, O = org2.example.com, CN = ca.org2.example.com
+Requested Signature Algorithms: RSA-PSS+SHA256:ECDSA+SHA256:Ed25519:RSA-PSS+SHA384:RSA-PSS+SHA512:RSA+SHA256:RSA+SHA384:RSA+SHA512:ECDSA+SHA384:ECDSA+SHA512:RSA+SHA1:ECDSA+SHA1
+Shared Requested Signature Algorithms: RSA-PSS+SHA256:ECDSA+SHA256:Ed25519:RSA-PSS+SHA384:RSA-PSS+SHA512:RSA+SHA256:RSA+SHA384:RSA+SHA512:ECDSA+SHA384:ECDSA+SHA512
+Peer signing digest: SHA256
+Peer signature type: ECDSA
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1385 bytes and written 387 bytes
+Verification error: unable to verify the first certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_128_GCM_SHA256
+Server public key is 256 bit
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 21 (unable to verify the first certificate)
+---
+          @ DONE
+read from 0x58dc61101cc0 [0x58dc61109943] (5 bytes => 5 (0x5))
+0000 - 17 03 03 00 20                                    .... 
+read from 0x58dc61101cc0 [0x58dc61109948] (32 bytes => 32 (0x20))
+0000 - f4 07 54 8c 12 d8 4e 97-aa 37 77 3d 26 09 5e 3e   ..T...N..7w=&.^>
+0010 - cb 8e c1 76 5c 99 cd 1d-11 97 42 98 59 e2 c6 b8   ...v\.....B.Y...
+write to 0x58dc61101cc0 [0x58dc6110da93] (24 bytes => 24 (0x18))
+0000 - 17 03 03 00 13 79 82 ce-a6 ef ba 50 7a 1a 51 32   .....y.....Pz.Q2
+0010 - 6a dd d0 8a 17 2b 0b 87-                          j....+..
+read from 0x58dc61101cc0 [0x58dc61059670] (8192 bytes => 24 (0x18))
+0000 - 17 03 03 00 13 be 6d 5f-ad 4f a0 5f 18 41 24 bd   ......m_.O._.A$.
+0010 - 8b 26 30 c4 e5 de b0 ce-                          .&0.....
+read from 0x58dc61101cc0 [0x58dc61059670] (8192 bytes => 0)

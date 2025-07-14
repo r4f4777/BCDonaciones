@@ -1,12 +1,12 @@
 name: test-network-org1
-version: 1.0.0
+version: "1.0.0"
 
 client:
   organization: Org1
   connection:
     timeout:
       peer:
-        endorser: '300'
+        endorser: 30s
 
 organizations:
   Org1:
@@ -14,7 +14,7 @@ organizations:
     peers:
       - peer0.org1.example.com
     certificateAuthorities:
-      - ca.org1.example.com
+      - ca-org1
 
 peers:
   peer0.org1.example.com:
@@ -41,7 +41,7 @@ peers:
       hostnameOverride: peer0.org1.example.com
 
 certificateAuthorities:
-  ca.org1.example.com:
+  ca-org1:
     url: https://localhost:7054
     caName: ca-org1
     tlsCACerts:
@@ -71,10 +71,12 @@ channels:
         url: grpcs://localhost:7050
         grpcOptions:
           ssl-target-name-override: orderer.example.com
+          hostnameOverride: orderer.example.com
         tlsCACerts:
           pem: |-
             -----BEGIN CERTIFICATE-----
-            (aquí el contenido de ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt)
+            # pega aquí el contenido completo de
+            # organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt
             -----END CERTIFICATE-----
     peers:
       peer0.org1.example.com:

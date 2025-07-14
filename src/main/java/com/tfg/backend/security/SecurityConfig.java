@@ -59,6 +59,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 // 3) Configuración de rutas públicas vs protegidas
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(HttpMethod.POST,"/api/blockchain/**").permitAll()
                         // ---- PÚBLICAS: login, register, oauth2 y cambio de rol ----
                         .requestMatchers(HttpMethod.OPTIONS, "/api/auth/**").permitAll()        // preflight
                         .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
@@ -67,6 +68,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/oauth2/**", "/oauth2-success").permitAll()
 
                         // ---- PÚBLICAS: consulta de campañas y entidades ----
+                        .requestMatchers(HttpMethod.GET,"/api/blockchain/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/campanias/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/entidades/**").permitAll()
 

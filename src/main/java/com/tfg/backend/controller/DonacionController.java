@@ -1,6 +1,7 @@
 package com.tfg.backend.controller;
 
 import com.tfg.backend.dto.DonacionDTO;
+import com.tfg.backend.dto.DonacionResponseDTO;
 import com.tfg.backend.model.Campania;
 import com.tfg.backend.model.Donacion;
 import com.tfg.backend.model.EntidadReceptora;
@@ -85,6 +86,7 @@ public class DonacionController {
     @PostMapping
     public ResponseEntity<?> crearDonacion(@RequestBody DonacionDTO donacionDTO,
                                            Principal principal) {
+        // 1. Validaciones básicas de entrada
         if (donacionDTO.getEntidadReceptoraId() == null) {
             return ResponseEntity.badRequest().body("entidadReceptoraId es obligatorio");
         }
@@ -92,21 +94,23 @@ public class DonacionController {
             return ResponseEntity.badRequest().body("campaniaId es obligatorio");
         }
 
-        Usuario donante = usuarioRepository.findByEmail(principal.getName())
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+        try {
+            // 2. Delegar toda la lógica al servicio
+            // Ahora el servicio devolverá un DonacionResponseDTO
+            DonacionResponseDTO responseDTO = donacionService.procesarNuevaDonacion(
+                    donacionDTO, principal.getName()); // Pasa el email del donante
 
-        EntidadReceptora entidadReceptora = entidadReceptoraRepository
-                .findById(donacionDTO.getEntidadReceptoraId())
-                .orElseThrow(() -> new RuntimeException("Entidad receptora no encontrada"));
+            return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
 
-        Campania campania = campaniaRepository.findById(donacionDTO.getCampaniaId())
-                .orElseThrow(() -> new RuntimeException("Campaña no encontrada"));
-
-        Donacion donacion = donacionService.convertToEntity(
-                donacionDTO, donante, entidadReceptora, campania);
-        Donacion saved = donacionRepository.save(donacion);
-        DonacionDTO responseDTO = donacionService.convertToDTO(saved);
-        return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
+        } catch (RuntimeException e) {
+            // Manejo de errores a nivel de controlador para excepciones lanzadas por el servicio
+            System.err.println("Error al procesar la donación: " + e.getMessage());
+            // Devuelve el mensaje de la excepción RuntimeException (ej. "Fallo al registrar la donación en blockchain")
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error inesperado al procesar la donación: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocurrió un error interno al procesar la donación.");
+        }
     }
 
     @Operation(summary = "Obtener las donaciones del usuario autenticado",
