@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+fabric/crypto-config/
+src/main/resources/fabric/wallet/
+chaincode/donation/vendor/
+*.pem
+*_sk
+*.key
+
